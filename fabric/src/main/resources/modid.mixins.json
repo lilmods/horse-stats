@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "MinecraftClientMixin"
+    "dev.example.modid.fabric.mixins.MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

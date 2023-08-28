@@ -1,5 +1,6 @@
 package dev.gallon.horsestatsmod.forge
 
+import dev.gallon.horsestatsmod.common.ModMetadata
 import dev.gallon.horsestatsmod.forge.config.ModConfig
 import me.shedaniel.autoconfig.AutoConfig
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer
@@ -9,7 +10,7 @@ import net.minecraftforge.client.ConfigScreenHandler
 import net.minecraftforge.fml.ModLoadingContext
 import net.minecraftforge.fml.common.Mod
 
-@Mod("horsestatsmod")
+@Mod(ModMetadata.MOD_ID)
 class HorseStats {
     init {
         // Init config screen
