@@ -1,4 +1,3 @@
-
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -31,7 +30,9 @@ dependencies {
     minecraft("net.minecraftforge:forge:$minecraftVersion-$forgeVersion")
     implementation("thedarkcolour:kotlinforforge:$kotlinForForge")
     api(fg.deobf("me.shedaniel.cloth:cloth-config-forge:$clothConfigVersion"))
-    inJar(project(":common"))
+    inJar(project(":common")) {
+        exclude("com.google.guava", "guava")
+    }
 }
 
 val Project.minecraft: net.minecraftforge.gradle.common.util.MinecraftExtension
@@ -54,7 +55,18 @@ minecraft.let {
             property("forge.logging.console.level", "debug")
             mods {
                 create(forgeModVersion) {
-                    source(sourceSets.main.get())
+                    source(
+                        sourceSets.main.get().apply {
+                            resources {
+                                srcDirs.plus(
+                                    // Add common module resources in this module at runtime
+                                    resources {
+                                        srcDirs(project(":common").sourceSets.main.get().resources.srcDirs)
+                                    },
+                                )
+                            }
+                        },
+                    )
                 }
             }
         }
