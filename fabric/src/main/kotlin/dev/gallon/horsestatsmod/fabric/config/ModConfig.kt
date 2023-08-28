@@ -1,7 +1,7 @@
 package dev.gallon.horsestatsmod.fabric.config
 
-import dev.gallon.horsestatsmod.common.HorseStatsConfig
-import dev.gallon.horsestatsmod.common.ModMetadata
+import dev.gallon.horsestatsmod.common.domain.ModConfig
+import dev.gallon.horsestatsmod.common.domain.ModMetadata
 import me.shedaniel.autoconfig.ConfigData
 import me.shedaniel.autoconfig.annotation.Config
 import me.shedaniel.autoconfig.annotation.ConfigEntry
@@ -11,5 +11,5 @@ class ModConfig : ConfigData {
     // documentation: https://shedaniel.gitbook.io/cloth-config/auto-config/creating-a-config-class
 
     @ConfigEntry.Gui.CollapsibleObject
-    val config = HorseStatsConfig()
+    val config = ModConfig()
 }
