@@ -13,7 +13,7 @@ description = '''
 A lightweight mod that shows the hidden horses' stats (health, jump height, speed, and slots for Llamas)
 '''
 updateJSONURL="https://raw.githubusercontent.com/lilmods/horse-stats/main/updates.json"
-logoFile="icon.png"
+logoFile="assets/horsestatsmod/icon.png"
 [[dependencies.horsestatsmod]]
 modId = "forge"
 mandatory = true
