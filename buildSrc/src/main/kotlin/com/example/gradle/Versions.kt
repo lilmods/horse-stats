@@ -29,6 +29,8 @@ const val fabricModArchive = "$modId-$fabricModVersion-fabric"
 // External dependencies
 
 // Common
+const val kotlinxCoroutines = "1.7.3"
+const val googleGuava = "32.1.2-jre"
 const val clothConfigVersion = "11.1.106" // https://linkie.shedaniel.dev/dependencies
 
 // Fabric - also update fabric.mod.json

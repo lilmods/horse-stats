@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation("com.google.guava:guava:$googleGuava")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutines")
 }
 
 tasks {

@@ -1,7 +1,0 @@
-{
-  "text.autoconfig.horsestatsmod.title": "Aim Assistance Configuration",
-  "text.autoconfig.horsestatsmod.option.config": "Configuration",
-  "text.autoconfig.horsestatsmod.option.config.doubleField": "doubleField description",
-  "text.autoconfig.horsestatsmod.option.config.booleanField": "booleanField description",
-  "text.autoconfig.horsestatsmod.option.config.longField":  "longField description"
-}

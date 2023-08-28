@@ -1,0 +1,21 @@
+{
+  "text.autoconfig.horsestatsmod.title": "Aim Assistance Configuration",
+  "text.autoconfig.horsestatsmod.option.config": "Configuration",
+  "text.autoconfig.horsestatsmod.option.config.doubleField": "doubleField description",
+  "text.autoconfig.horsestatsmod.option.config.booleanField": "booleanField description",
+  "text.autoconfig.horsestatsmod.option.config.longField":  "longField description",
+  "horsestatsmod.stats": "Stats",
+  "horsestatsmod.health": "Vie",
+  "horsestatsmod.jump": "Saut",
+  "horsestatsmod.speed": "Vitesse",
+  "horsestatsmod.slots": "Emplacements",
+  "horsestatsmod.blocks": "Blocs",
+  "horsestatsmod.metersperseconds": "m/s",
+  "horsestatsmod.player": "Joueur",
+  "horsestatsmod.walk": "Marche",
+  "horsestatsmod.sprint": "Sprint",
+  "horsestatsmod.min": "min",
+  "horsestatsmod.max": "max",
+  "horsestatsmod.loading": "Chargement ...",
+  "horsestatsmod.owner": "Propriétaire"
+}
