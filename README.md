@@ -13,3 +13,11 @@ A lightweight forge & fabric mod that shows the hidden horses' stats (health, ju
 
 ![github downloads](https://img.shields.io/github/downloads/lilgallon/horsestatsmod/total.svg?label=Github%20downloads&logo=github&style=for-the-badge)
 [![curseforge downloads](http://cf.way2muchnoise.eu/full_409126_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-statistics)
+
+**Screenshots**
+
+_work in progress_
+
+**Configuration**
+
+_work in progress_
