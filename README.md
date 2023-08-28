@@ -4,10 +4,9 @@ A lightweight forge & fabric mod that shows the hidden horses' stats (health, ju
 
 **Build status**
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/build-fabric.yml?style=for-the-badge&logo=gradle&label=fabric%20build)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/release-fabric.yml?style=for-the-badge&logo=flatpak&logoColor=white&label=fabric%20release)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/build-forge.yml?style=for-the-badge&logo=gradle&label=forge%20build)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/release-forge.yml?style=for-the-badge&logo=flatpak&logoColor=white&label=forge%20release)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/build-fabric.yml?style=for-the-badge&logo=gradle&label=fabric%20build)![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/release-fabric.yml?style=for-the-badge&logo=flatpak&logoColor=white&label=fabric%20release)
+
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/build-forge.yml?style=for-the-badge&logo=gradle&label=forge%20build)![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lilmods/horse-stats/release-forge.yml?style=for-the-badge&logo=flatpak&logoColor=white&label=forge%20release)
 
 **Downloads**
 
