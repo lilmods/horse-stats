@@ -1,7 +1,7 @@
-package com.example.modid.fabric.mixins;
+package dev.gallon.horsestatsmod.fabric.mixins;
 
-import com.example.modid.fabric.events.SingleEventBus;
-import com.example.modid.fabric.events.TickEvent;
+import dev.gallon.horsestatsmod.fabric.events.SingleEventBus;
+import dev.gallon.horsestatsmod.fabric.events.TickEvent;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

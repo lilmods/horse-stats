@@ -1,4 +1,4 @@
-package com.example.modid.fabric.config
+package dev.gallon.horsestatsmod.fabric.config
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory
 import com.terraformersmc.modmenu.api.ModMenuApi

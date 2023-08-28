@@ -1,26 +1,26 @@
 modLoader = "kotlinforforge"
 
 loaderVersion = "[4,)" # the loader is kotlin for forge
-license = "{license}"
-issueTrackerURL = "https://github.com/{githubUser}/{githubRepo}/issues"
+license = "GNU-LGPL-3.0"
+issueTrackerURL = "https://github.com/lilmods/horse-stats/issues"
 
 [[mods]]
-modId = "modid"
+modId = "horsestatsmod"
 version = "1.0.0"
-displayName = "ModName"
-authors = "{author}"
+displayName = "HorseStats"
+authors = "lilgallon"
 description = '''
-ModDescription
+A lightweight mod that shows the hidden horses' stats (health, jump height, speed, and slots for Llamas)
 '''
-updateJSONURL="https://raw.githubusercontent.com/{githubUser}/{githubRepo}/main/updates.json"
+updateJSONURL="https://raw.githubusercontent.com/lilmods/horse-stats/main/updates.json"
 logoFile="icon.png"
-[[dependencies.modid]]
+[[dependencies.horsestatsmod]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "CLIENT"
-[[dependencies.modid]]
+[[dependencies.horsestatsmod]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1]"

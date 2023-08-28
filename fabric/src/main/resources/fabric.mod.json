@@ -1,35 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "horsestatsmod",
   "version": "${version}",
 
-  "name": "modid",
-  "description": "ModDescription",
+  "name": "horsestatsmod",
+  "description": "A lightweight mod that shows the hidden horses' stats (health, jump height, speed, and slots for Llamas)",
   "authors": [
-    "{author}"
+    "lilgallon"
   ],
   "contact": {
-    "homepage": "https://github.com/{githubUser}/{githubRepo}/issues",
-    "sources": "https://github.com/{githubUser}/{githubRepo}"
+    "homepage": "https://github.com/lilmods/horse-stats/issues",
+    "sources": "https://github.com/lilmods/horse-stats"
   },
 
-  "license": "{license}",
-  "icon": "assets/modid/icon.png",
+  "license": "GNU-LGPL-3.0",
+  "icon": "assets/horsestatsmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.example.modid.fabric.ModName"
+        "value": "dev.gallon.horsestatsmod.fabric.HorseStats"
       }
     ],
     "modmenu": [
-      "com.example.modid.fabric.config.ModMenu"
+      "dev.gallon.horsestatsmod.fabric.config.ModMenu"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "horsestatsmod.mixins.json"
   ],
 
   "depends": {

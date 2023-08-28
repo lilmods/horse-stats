@@ -6,7 +6,7 @@ const val jvmTarget = "17"
 const val minecraftVersion = "1.20.1"
 
 // Mod
-const val modId = "modid"
+const val modId = "horsestatsmod"
 const val modGroup = "com.example.$modId"
 const val coreVersion = "1.0.0"
 

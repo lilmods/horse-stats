@@ -1,4 +1,4 @@
-package com.example.modid.fabric.events
+package dev.gallon.horsestatsmod.fabric.events
 
 import kotlin.reflect.KClass
 

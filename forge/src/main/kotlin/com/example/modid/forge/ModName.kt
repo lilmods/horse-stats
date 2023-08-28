@@ -1,6 +1,6 @@
-package com.example.modid.forge
+package dev.gallon.horsestatsmod.forge
 
-import com.example.modid.forge.config.ModConfig
+import dev.gallon.horsestatsmod.forge.config.ModConfig
 import me.shedaniel.autoconfig.AutoConfig
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer
 import net.minecraft.client.Minecraft
@@ -9,8 +9,8 @@ import net.minecraftforge.client.ConfigScreenHandler
 import net.minecraftforge.fml.ModLoadingContext
 import net.minecraftforge.fml.common.Mod
 
-@Mod("modid")
-class ModName {
+@Mod("horsestatsmod")
+class HorseStats {
     init {
         // Init config screen
         AutoConfig.register(ModConfig::class.java, ::JanksonConfigSerializer)
