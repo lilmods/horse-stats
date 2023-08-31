@@ -1,6 +1,6 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.*
 
 buildscript {
     dependencies {
@@ -9,7 +9,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm")
+    id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("net.minecraftforge.gradle") version forgeGradlePlugin
 }
 
@@ -21,18 +21,11 @@ repositories {
     maven("https://maven.shedaniel.me/") // Cloth config
 }
 
-val inJar: Configuration = configurations.create("inJar")
-// configurations.minecraftLibrary.get().extendsFrom(inJar) does not work, the files of inJar dependencies are not
-// included in the minecraft classpath during runtime
-configurations.minecraftLibrary.get().extendsFrom(inJar)
-
 dependencies {
     minecraft("net.minecraftforge:forge:$minecraftVersion-$forgeVersion")
     implementation("thedarkcolour:kotlinforforge:$kotlinForForge")
     api(fg.deobf("me.shedaniel.cloth:cloth-config-forge:$clothConfigVersion"))
-    inJar(project(":common")) {
-        exclude("com.google.guava", "guava")
-    }
+    compileOnly(project(":common"))
 }
 
 val Project.minecraft: net.minecraftforge.gradle.common.util.MinecraftExtension
@@ -41,41 +34,37 @@ val Project.minecraft: net.minecraftforge.gradle.common.util.MinecraftExtension
 minecraft.let {
     it.mappings("official", minecraftVersion)
     it.runs {
-        all {
-            lazyToken("minecraft_classpath") {
-                inJar.copyRecursive().resolve()
-                    .filterNot { it.absolutePath.contains("org.jetbrains") }
-                    .filterNot { it.absolutePath.contains("kotlin-stdlib") }
-                    .joinToString(File.pathSeparator) { it.absolutePath }
-            }
-        }
-
         create("client") {
             workingDirectory(project.file("run"))
             property("forge.logging.console.level", "debug")
             mods {
-                create(forgeModVersion) {
-                    source(
-                        sourceSets.main.get().apply {
-                            resources {
-                                srcDirs.plus(
-                                    // Add common module resources in this module at runtime
-                                    resources {
-                                        srcDirs(project(":common").sourceSets.main.get().resources.srcDirs)
-                                    },
-                                )
-                            }
-                        },
-                    )
+                create(modId) {
+                    sources(sourceSets.main.get())
                 }
             }
         }
     }
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir(project(":common").sourceSets.main.get().java)
+        }
+
+        kotlin {
+            srcDir(project(":common").sourceSets.main.get().kotlin)
+        }
+
+        resources {
+            srcDir(project(":common").sourceSets.main.get().resources)
+        }
+    }
+}
+
 tasks {
     val javaVersion = JavaVersion.valueOf("VERSION_$jvmTarget")
-    withType<JavaCompile> {
+    compileJava {
         options.encoding = "UTF-8"
         sourceCompatibility = javaVersion.toString()
         targetCompatibility = javaVersion.toString()
@@ -84,7 +73,7 @@ tasks {
         }
     }
 
-    withType<KotlinCompile> {
+    compileKotlin {
         kotlinOptions {
             jvmTarget = javaVersion.toString()
         }
@@ -98,15 +87,7 @@ tasks {
         targetCompatibility = javaVersion
     }
 
-    withType<Jar> {
-        doFirst {
-            from(
-                inJar
-                    .filterNot { it.absolutePath.contains("org.jetbrains") }
-                    .filterNot { it.absolutePath.contains("kotlin-stdlib") }
-                    .map { if (it.isDirectory) it else zipTree(it) },
-            )
-        }
+    jar {
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
         archiveBaseName.set(modId)
         manifest {
